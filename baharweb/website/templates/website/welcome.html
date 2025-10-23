@@ -1,1 +1,35 @@
-  <h1>Baharah Web desihner </h1>
+  {% extends "base.html" %}  
+    {% block title %} Welcome to my Website{% endblock %}
+    
+
+
+
+
+ {% block content %}
+
+ <div class="card-header">
+  
+
+  </div>
+<h5>  Hello the current Time is {{current_time}} </h5>
+there are currentlly {{name_posts}} posts.
+<hr>
+{% for post in posts %}
+
+
+<div class="card text-center  mx-auto mt-5" style="max-width: 600px;">
+  <div class="card-header">
+    {{post.title}}
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"> </h5>
+    <p class="card-text">  {{post.body}}</p>
+    <a href="#" class="btn btn-primary">Go</a>
+  </div>
+  
+</div>
+{% endfor %}
+{% endblock %}
+
+
+
