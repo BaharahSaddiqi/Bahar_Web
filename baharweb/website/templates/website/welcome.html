@@ -16,18 +16,8 @@ there are currentlly {{name_posts}} posts.
 <hr>
 {% for post in posts %}
 
+    {%  include "posts/post.html" %}
 
-<div class="card text-center  mx-auto mt-5" style="max-width: 600px;">
-  <div class="card-header">
-    {{post.title}}
-  </div>
-  <div class="card-body">
-    <h5 class="card-title"> <a href="{% url 'details'  post.id %}" >{{post.title}}</a></h5>
-    <p class="card-text">  {{post.body}}</p>
-    <a href="#" class="btn btn-primary">Go</a>
-  </div>
-  
-</div>
 {% endfor %}
 {% endblock %}
 
