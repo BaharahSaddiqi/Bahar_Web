@@ -1,15 +1,28 @@
-<div class="card text-center  mx-auto mt-5" style="max-width: 600px;">
+<div class="card text-center mx-auto mt-5" style="max-width: 600px;">
+
   <div class="card-header">
-    {{post.title}}
+    {{ post.title }}
   </div>
+
   <div class="card-body">
-    <h5 class="card-title"  style="color: black;"> <a href="{% url 'details'  post.id %}" >{{post.title}}</a></h5>
-    <p class="card-text" style="color: black;">  {{post.body}}</p>
- 
-    <hr>
-    <p>Author : {{ post.auther }}</p>
-    <a href="{% url 'delete' post.id %}" class="btn btn-danger btn-small"> Delete Post</a>
-     
+
+    <h5 class="card-title mb-3" style="color: black;">
+      <a href="{% url 'details' post.id %}">{{ post.title }}</a>
+    </h5>
+
+    <p class="card-text mb-4" style="color: black;">
+      {{ post.body }}
+    </p>
+
+    <hr class="my-4">
+
+    <p class="mb-4">Author : {{ post.auther }}</p>
+
+    <a href="{% url 'delete' post.id %}" class="btn btn-danger btn-small">
+      Delete Post
+    </a>
+
   </div>
-  
+
 </div>
+
